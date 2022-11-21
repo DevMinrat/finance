@@ -1,0 +1,35 @@
+.hollow-btn {
+  width: 100%;
+  max-width: 19.2rem;
+  height: 5.2rem;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.6rem;
+  color: $primary;
+
+  padding: 1.4rem 3.2rem;
+
+  background-color: transparent;
+  border: 1px solid #595187;
+  border-radius: 7.2rem;
+
+  transition: all 0.2s ease;
+
+  svg {
+    margin-left: 0.6rem;
+  }
+
+  &:hover {
+    color: white;
+
+    background-color: $accent;
+    border-color: $accent;
+
+    svg {
+      fill: white;
+      margin-left: 1.6rem;
+    }
+  }
+}
