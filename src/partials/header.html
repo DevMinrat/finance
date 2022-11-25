@@ -1,23 +1,100 @@
 <header class="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">
-                <img src="assets/images/logo-icon.png" alt="">
-                <img src="assets/images/logo-text.svg" alt="">
-            </div>
+            <a class="header__logo" href="#">
+                <img class="header__logo-img" src="assets/images/logo.svg" alt="">
+            </a>
             <nav class="menu">
-                <ul class="menu__nav-list">
-                    <li class="nav-list__item">
-                        <a href="#opportunities" class="nav-list__item-link">Наши возможности</a>
-                    </li>
-                    <li class="nav-list__item">
-                        <a href="#getting" class="nav-list__item-link">Что вы получаете</a>
-                    </li>
-                    <li class="nav-list__item">
-                        <a href="#partners" class="nav-list__item-link">Партнеры</a>
-                    </li>
-                </ul>
+                <div class="menu__nav-list">
+                    <div class="nav-list__item">
+                        <a href="#" class="nav-list__item-link">Кредиты</a>
+                    </div>
+                    <div class="nav-list__item">
+                        <a href="#getting" class="nav-list__item-link">Займы</a>
+                    </div>
+                    <div class="nav-list__item">
+                        <a href="#partners" class="nav-list__item-link">Карты</a>
+                    </div>
+                    <div class="nav-list__item">
+                        <a href="#partners" class="nav-list__item-link">Вклады</a>
+                    </div>
+                    <div class="nav-list__item">
+                        <a href="#partners" class="nav-list__item-link">Ипотека</a>
+                    </div>
+                    <div class="nav-list__item">
+                        <a href="#partners" class="nav-list__item-link">Страховка</a>
+                    </div>
+                    <div class="nav-list__item nav-list__item--dropdown">
+                        <span class="nav-list__item-link nav-list__item-link--droplink">
+                            Другое
+                        </span>
+                        <svg class="nav-list__item-arrow">
+                            <use href="#chevron"></use>
+                        </svg>
+                        <div class="nav-list__droplink-list">
+                            <a class="droplink-list__item-link" href="#">Новости</a>
+                            <a class="droplink-list__item-link" href="#">Статьи</a>
+                            <a class="droplink-list__item-link" href="#">Рейтинги</a>
+                            <a class="droplink-list__item-link" href="#">Вопрос-ответ</a>
+                            <a class="droplink-list__item-link" href="#">Словарь</a>
+                            <a class="droplink-list__item-link" href="#">Банки</a>
+                            <a class="droplink-list__item-link" href="#">МФО</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
+
+            <div class="currency">
+                <div class="currency-item">
+                    <p class="currency-item__name">USD</p>
+                    <p class="currency-item__value">61.24 ₽ </p>
+                </div>
+                <div class="currency-item">
+                    <p class="currency-item__name">EUR</p>
+                    <p class="currency-item__value">61.02 ₽ </p>
+                </div>
+            </div>
+
+            <div class="header-links">
+                <button class="header-search-btn" type="button">
+                    <svg>
+                        <use href="#search"></use>
+                    </svg>
+                </button>
+                <div class="header-search__wrapper">
+                    <form class="header-search">
+                        <input class="header-search__input" type="text" placeholder="Введите запрос, например, вклады" value="Кредитная карта Тинькофф Платинум">
+                        <button class="header-search__icon" type="submit">
+                            <svg>
+                                <use href="#search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="header-search__result">
+                        <a class="header-search__item" href="#">
+                            <p class="header-search__item-title">Кредитная карта Тинькофф Платинум</p>
+                            <p class="header-search__item-descr">Кроме того, сейчас банки предпочитают «долгие» вклады —
+                                на три или два года. Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                в банке Ренессанс Кредит — на 91 день. Депозиты искали на сайтах банков
+                                из топ-50 по объёму активов. От каждого банка в рейтинг мог попасть один самый выгодный
+                                вклад. Ставки учитывались на минимально возможную сумму депозита в банке.</p>
+                        </a>
+                        <a class="header-search__item" href="#">
+                            <p class="header-search__item-title">Кредитная карта Тинькофф Платинум</p>
+                            <p class="header-search__item-descr">Кроме того, сейчас банки предпочитают «долгие» вклады —
+                                на три или два года. Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                в банке Ренессанс Кредит — на 91 день. Депозиты искали на сайтах банков
+                                из топ-50 по объёму активов. От каждого банка в рейтинг мог попасть один самый выгодный
+                                вклад. Ставки учитывались на минимально возможную сумму депозита в банке.</p>
+                        </a>
+                    </div>
+                </div>
+                <a class="header-account" href="#">
+                    <svg>
+                        <use href="#person"></use>
+                    </svg>
+                </a>
+            </div>
 
             <div class="burger-menu">
                 <div class="burger"></div>

@@ -1,0 +1,13 @@
+.services-slider {
+  .swiper-slide {
+    width: max-content;
+
+    padding: 0.5rem 0;
+
+    &.active {
+      color: $secondary;
+
+      border-bottom: 0.2rem solid $secondary;
+    }
+  }
+}

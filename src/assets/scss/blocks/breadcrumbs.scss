@@ -1,0 +1,50 @@
+.breadcrumb-wrapper {
+  min-height: 2rem;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 8rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 5rem;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a::after {
+  content: "";
+  display: inline-block;
+  margin: 0 1.4rem;
+
+  width: 0.6rem;
+  height: 1rem;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.69657 4.79967L1.58245 0.685547C1.33505 0.438151 0.932903 0.438151 0.685547 0.685547C0.438191 0.932943 0.438151 1.33509 0.685547 1.58245L4.3531 5.25L0.685547 8.91755C0.438151 9.16495 0.438151 9.5671 0.685547 9.81445C0.932943 10.0618 1.33509 10.0618 1.58245 9.81445L5.69657 5.7016C5.82215 5.57603 5.88306 5.41238 5.88178 5.25124C5.88178 5.08639 5.82087 4.92397 5.69657 4.79967Z' fill='%2398A1A7'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.breadcrumb span,
+.breadcrumb a {
+  line-height: 1;
+  font-weight: 400;
+  font-size: max(12px, 1.4rem);
+  color: $black;
+
+  padding: 0.3rem 0;
+
+  transition: all 0.2s linear;
+}
+
+.breadcrumb span {
+  color: $gray;
+}
+
+.breadcrumb a:hover {
+  color: $primary;
+}

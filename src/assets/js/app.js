@@ -1,7 +1,8 @@
 //= ../../../node_modules/swiper/swiper-bundle.js
+//= ../../../node_modules/choices.js/public/assets/scripts/choices.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  //= components/scroll-lock.js
+  //= components/scrollLock.js
   //= components/sliders.js
 
   // header functional
@@ -45,6 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollLock.enablePageScroll();
       }
     });
+  }
+
+  const headerSearchBtn = document.querySelector(".header-search-btn");
+  const headerSearch = document.querySelector(".header-search__wrapper");
+
+  if (headerSearchBtn) {
+    headerSearchBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      headerSearchBtn.classList.toggle("active");
+      headerSearch.classList.toggle("active");
+    });
+
+    // document.documentElement.addEventListener("click", (e) => {
+    //   let t = e.target;
+
+    //   if (!headerSearch.contains(t)) {
+    //     headerOther.classList.remove("active");
+    //     menu.classList.remove("hide");
+    //     headerLogo.classList.remove("mob-search");
+    //   }
+    // });
   }
 
   // tabs
@@ -133,21 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.querySelector("[data-close]").addEventListener("click", () => {
         el.classList.add("hide");
         scrollLock.enablePageScroll();
-      });
-    });
-  }
-
-  // Anchor smooth scroll
-
-  const pageLinks = document.querySelectorAll('a[href^="#"]');
-
-  if (pageLinks.length > 0) {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
       });
     });
   }
