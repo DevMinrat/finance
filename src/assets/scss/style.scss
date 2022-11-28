@@ -11,13 +11,13 @@ html {
     font-size: calc(100vw / 1320 * 10);
   }
   @include breakpoint($xl-bp) {
-    font-size: calc(100vw / 1385 * 10);
+    font-size: calc(100vw / 1185 * 10);
   }
   @include breakpoint($lg-bp) {
     font-size: calc(100vw / 830 * 10);
   }
   @include breakpoint($sm-bp) {
-    font-size: calc(100vw / 320 * 10);
+    font-size: calc(100vw / 375 * 10);
   }
 }
 
@@ -66,6 +66,8 @@ svg {
 
 input,
 button {
+  border: none;
+  background: transparent;
   font-family: Inter, sans-serif;
 
   &::placeholder {
@@ -90,6 +92,8 @@ button {
 @import "blocks/breadcrumbs.scss";
 
 @import "blocks/services-slider.scss";
+
+@import "blocks/single-review.scss";
 
 @import "blocks/footer";
 
