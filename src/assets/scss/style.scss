@@ -74,6 +74,13 @@ button {
     font-family: Inter, sans-serif;
   }
 }
+.tabs-pane {
+  display: none;
+
+  &.tabs-pane_show {
+    display: block;
+  }
+}
 
 /* Vendors */
 
@@ -94,6 +101,10 @@ button {
 @import "blocks/services-slider.scss";
 
 @import "blocks/single-review.scss";
+
+@import "blocks/serv-search.scss";
+@import "blocks/category.scss";
+@import "blocks/popular.scss";
 
 @import "blocks/footer";
 

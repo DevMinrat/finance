@@ -1,0 +1,42 @@
+.serv-search__form {
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+
+  padding: 4.2rem 8rem 6.2rem 11rem;
+
+  background: linear-gradient(
+    90.97deg,
+    #a4dd1f -1.49%,
+    #5bbd0d 7.38%,
+    #5bbd0e 58.93%,
+    #b2e222 100%
+  );
+  border-radius: 1rem;
+}
+
+.serv-search__item {
+  width: 100%;
+  max-width: 41rem;
+}
+
+.serv-search__item-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+
+  margin-bottom: 0.8rem;
+}
+
+.serv-search__btn {
+  width: 100%;
+  max-width: 22rem;
+  height: 5rem;
+
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+
+  background: #2d9cdb;
+  border-radius: 1rem;
+}

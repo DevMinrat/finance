@@ -17,3 +17,22 @@ const servicesSlider = new Swiper(".services-slider", {
   //     },
   //   },
 });
+const popularNavsSlider = new Swiper(".popular-nav", {
+  slidesPerView: "auto",
+  spaceBetween: 60,
+});
+
+const popularSliders = document.querySelectorAll(".popular-slider");
+
+popularSliders.forEach((el) => {
+  console.log(el.querySelector(".slider-nav_next"));
+  new Swiper(el, {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: el.querySelector(".slider-nav_next"),
+      prevEl: el.querySelector(".slider-nav_prev"),
+    },
+  });
+});

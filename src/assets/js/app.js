@@ -70,6 +70,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
   }
 
+  // inputs
+
+  const servSearchSelect = document.querySelectorAll(".serv-search__select");
+
+  if (servSearchSelect.length) {
+    servSearchSelect.forEach((el) => {
+      new Choices(el, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: "",
+      });
+    });
+  }
+
   // tabs
 
   class ItcTabs {
@@ -80,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof target === "string" ? document.querySelector(target) : target;
       this._elButtons = this._elTabs.querySelectorAll(".tabs-btn");
       this._elPanes = this._elTabs.querySelectorAll(".tabs-pane");
-      this._elPanesAddl = this._elTabs.querySelectorAll(".tabs-pane_addl");
       this._eventShow = new Event("tab.itc.change");
       this._init();
       this._events();
@@ -91,26 +104,19 @@ document.addEventListener("DOMContentLoaded", () => {
         el.dataset.index = index;
         el.setAttribute("role", "tab");
         this._elPanes[index].setAttribute("role", "tabpanel");
-        this._elPanesAddl[index].setAttribute("role", "tabpanel");
       });
     }
     show(elLinkTarget) {
       const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
-      const elPaneAddlTarget = this._elPanesAddl[elLinkTarget.dataset.index];
       const elLinkActive = this._elTabs.querySelector(".tabs-btn_active");
       const elPaneShow = this._elTabs.querySelector(".tabs-pane_show");
-      const elPaneAddlShow = this._elTabs.querySelector(".tabs-pane_addl_show");
       if (elLinkTarget === elLinkActive) {
         return;
       }
       elLinkActive ? elLinkActive.classList.remove("tabs-btn_active") : null;
       elPaneShow ? elPaneShow.classList.remove("tabs-pane_show") : null;
-      elPaneAddlShow
-        ? elPaneAddlShow.classList.remove("tabs-pane_addl_show")
-        : null;
       elLinkTarget.classList.add("tabs-btn_active");
       elPaneTarget.classList.add("tabs-pane_show");
-      elPaneAddlTarget.classList.add("tabs-pane_addl_show");
       this._elTabs.dispatchEvent(this._eventShow);
       elLinkTarget.focus();
     }
@@ -128,10 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+  new ItcTabs(".tabs");
+  // const tabs = document.querySelectorAll(".tabs");
 
-  if (document.querySelector(".contacts-addrs")) {
-    new ItcTabs(".contacts-addrs");
-  }
+  // if (tabs.length) {
+  //   tabs.forEach((el) => {
+  //     new ItcTabs(el);
+  //   });
+  // }
 
   // modal functioal
 

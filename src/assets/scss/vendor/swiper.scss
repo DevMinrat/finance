@@ -225,3 +225,52 @@
 .swiper-scrollbar-lock {
   display: none;
 }
+
+.slider-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .slider-nav_prev,
+  .slider-nav_next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.4rem;
+    height: 4.4rem;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: all 0.1s linear;
+
+    svg {
+      width: 0.9rem;
+      height: 0.6rem;
+
+      fill: #bdbdbd;
+    }
+
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  .slider-nav_prev {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+  .slider-nav_next {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

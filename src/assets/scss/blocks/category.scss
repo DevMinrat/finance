@@ -1,0 +1,29 @@
+.category__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 19rem;
+  height: 14rem;
+
+  background: #f2f2f2;
+  border-radius: 0.8rem;
+}
+.category-item__img {
+  width: 100%;
+  max-width: 5.2rem;
+  height: auto;
+
+  margin-bottom: 0.8rem;
+}
+.category-item__name {
+  font-size: 1.4rem;
+}
