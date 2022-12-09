@@ -17,7 +17,7 @@ html {
     font-size: calc(100vw / 830 * 10);
   }
   @include breakpoint($sm-bp) {
-    font-size: calc(100vw / 375 * 10);
+    font-size: calc(100vw / 320 * 10);
   }
 }
 
@@ -82,6 +82,24 @@ button {
   }
 }
 
+.text {
+  a {
+    color: $secondary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  ul {
+    list-style: disc inside;
+  }
+  ol {
+    list-style: decimal inside;
+  }
+}
+
 /* Vendors */
 
 @import "vendor/swiper.scss";
@@ -105,6 +123,12 @@ button {
 @import "blocks/serv-search.scss";
 @import "blocks/category.scss";
 @import "blocks/popular.scss";
+@import "blocks/last-reviews.scss";
+@import "blocks/new-news.scss";
+@import "blocks/mnews.scss";
+@import "blocks/main-about.scss";
+@import "blocks/benefits.scss";
+@import "blocks/partners.scss";
 
 @import "blocks/footer";
 

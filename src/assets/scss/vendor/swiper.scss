@@ -240,22 +240,32 @@
     width: 4.4rem;
     height: 4.4rem;
 
-    border: 1px solid #bdbdbd;
+    border: 1px solid $primary;
+    background: $primary;
     border-radius: 50%;
 
     cursor: pointer;
     transition: all 0.1s linear;
 
+    &.swiper-button-disabled {
+      border-color: #bdbdbd;
+      background: transparent;
+
+      svg {
+        fill: #bdbdbd;
+      }
+    }
+
     svg {
       width: 0.9rem;
       height: 0.6rem;
 
-      fill: #bdbdbd;
+      fill: white;
     }
 
     &:hover {
-      background: $primary;
-      border-color: $primary;
+      background: $secondary;
+      border-color: $secondary;
 
       svg {
         fill: white;

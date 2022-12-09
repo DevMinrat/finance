@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   font-size: 1.6rem;
-  z-index: 1001;
 }
 .choices:focus {
   outline: none;
@@ -258,7 +257,7 @@
   position: relative;
   padding: 1.8rem 3rem;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
 
   &:not(:last-child) {
     border-bottom: 1px solid #f2f2f2;
@@ -377,7 +376,7 @@
 
 .choices__placeholder {
   color: #e0e0e0;
-  font-size: 1.4rem;
+  font-size: max(12px, 1.4rem);
 }
 
 .choices__list--dropdown .choices__placeholder {

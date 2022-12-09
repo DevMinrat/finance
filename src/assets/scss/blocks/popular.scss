@@ -2,11 +2,11 @@
   position: relative;
 }
 
-.popular-nav {
+.tabs-nav {
   margin-bottom: 3rem;
 }
 
-.popular-nav__btn {
+.tabs-nav .tabs-btn {
   width: max-content;
 
   font-size: 1.8rem;
@@ -21,6 +21,12 @@
 
 .popular-panes {
   overflow-x: hidden;
+}
+
+.popular-slider {
+  @include breakpoint($sm-bp) {
+    padding-bottom: 6rem;
+  }
 }
 
 .popular-item {
@@ -40,9 +46,27 @@
   box-shadow: inset 0px -1px 0px #e4e4ef;
   border-radius: 2rem;
 
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    max-width: 24rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: unset;
+    gap: 0;
+
+    padding: 0.8rem 1.6rem 1.9rem;
+  }
+
   img {
     width: 100%;
     max-width: 18.3rem;
+
+    @include breakpoint($sm-bp) {
+      max-width: 15rem;
+    }
   }
 }
 
@@ -56,7 +80,7 @@
   margin-bottom: 0.4rem;
 }
 .popular-item__limit {
-  font-size: 1.4rem;
+  font-size: max(12px, 1.4rem);
   color: $gray;
 }
 
@@ -64,4 +88,12 @@
   position: absolute;
   top: -8rem;
   right: 0;
+
+  @include breakpoint($sm-bp) {
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
 }

@@ -2,6 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 3rem;
+
+  @include breakpoint($lg-bp) {
+    gap: 1rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 }
 
 .category-item {
@@ -16,6 +26,10 @@
 
   background: #f2f2f2;
   border-radius: 0.8rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
 }
 .category-item__img {
   width: 100%;
@@ -25,5 +39,5 @@
   margin-bottom: 0.8rem;
 }
 .category-item__name {
-  font-size: 1.4rem;
+  font-size: max(12px, 1.4rem);
 }

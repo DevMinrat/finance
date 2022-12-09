@@ -13,6 +13,26 @@
     #b2e222 100%
   );
   border-radius: 1rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 4rem 3rem;
+    gap: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    padding: 4.5rem 1.5rem;
+    margin: 0 -1.5rem;
+
+    background: linear-gradient(
+      140.16deg,
+      #5bbd0d 19.81%,
+      #5bbd0e 44.75%,
+      #b2e222 73.91%
+    );
+  }
 }
 
 .serv-search__item {
@@ -21,7 +41,7 @@
 }
 
 .serv-search__item-name {
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
   font-weight: 500;
   color: white;
 
@@ -34,9 +54,19 @@
   height: 5rem;
 
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
   color: white;
 
   background: #2d9cdb;
   border-radius: 1rem;
+
+  @include breakpoint($lg-bp) {
+    max-width: 15rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+
+    margin-top: 10px;
+  }
 }

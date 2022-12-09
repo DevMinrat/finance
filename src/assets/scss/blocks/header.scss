@@ -95,7 +95,7 @@
 .nav-list__item-link {
   color: $black;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
 
   @include breakpoint($lg-bp) {
     font-weight: 400;
@@ -190,7 +190,7 @@
 .header-search__input {
   width: 100%;
 
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
   font-weight: 500;
   color: $black;
 
@@ -202,7 +202,7 @@
   outline: none;
 
   &::placeholder {
-    font-size: 1.5rem;
+    font-size: max(12px, 1.5rem);
     font-weight: 500;
     color: $gray;
   }
@@ -249,7 +249,7 @@
   margin-bottom: 1rem;
 }
 .header-search__item-descr {
-  font-size: 1.4rem;
+  font-size: max(12px, 1.4rem);
   font-weight: 400;
   color: $black;
 }
@@ -342,7 +342,7 @@
 .droplink-list__item-link {
   color: $black;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
   line-height: 0.9;
 
   &:hover {
@@ -390,7 +390,7 @@
   align-items: center;
   gap: 1rem;
 
-  font-size: 1.5rem;
+  font-size: max(12px, 1.5rem);
   font-weight: 500;
 }
 .currency-item__value {

@@ -76,344 +76,106 @@ title: Главная страница
     </div>
 </section>
 
-<section class="popular tabs section">
+{{> popular}}
+
+{{> last-reviews}}
+
+{{> new-news}}
+
+{{> mnews}}
+
+<div class="main-about text section">
     <div class="container">
-        <h2>Популярные предложения</h2>
-        <div class="popular__inner">
-            <div class="popular-nav">
-                <div class="swiper-wrapper">
-                    <button class="popular-nav__btn swiper-slide tabs-btn tabs-btn_active">Микрозаймы</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Кредиты</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Рефинансирование</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Кредитные карты</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Дебетовые карты</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Автокредиты</button>
-                    <button class="popular-nav__btn swiper-slide tabs-btn">Ипотека</button>
+        <h2>О проекте</h2>
+        <div class="main-about__inner">
+            <div class="main-about__content">
+                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках, перечисленных в
+                    таблице, защищены
+                    Агентством по страхованию вкладов — АСВ.</p>
+                <br>
+                <ol>
+                    <li>Газпромбанк — Копить. Ставка: до 8% годовых + кэшбэк 0,2% от суммы вклада. Сумма: от 100 000 ₽,
+                        срок: от 91 дня.
+                    </li>
+                    <li>Абсолют банк — Абсолютный максимум +. Ставка: до 8,25% годовых + кэшбэк 0,2% (до 4 000 ₽)
+                        от суммы вклада. Сумма: от 50 000 ₽, срок: от 3 месяцев.</li>
+                </ol>
+                <br>
+                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a href="#">системно значимых
+                        банков</a>. Их финансовая
+                    устойчивость важна для всей банковской системы страны.</p>
+                <br>
+                <ul>
+                    <li>ВТБ;</li>
+                    <li>МКБ;</li>
+                    <li>Альфа-Банк;</li>
+                    <li>Газпромбанк;</li>
+                    <li>банк Открытие.</li>
+                </ul>
+            </div>
+            <div class="main-about__info">
+                <div class="main-about__info-item">
+                    <img src="assets/images/icons/prod-icon.png" alt="">
+                    <p>Продуктов: <span>1234</span></p>
+                </div>
+                <div class="main-about__info-item">
+                    <img src="assets/images/icons/review-icon.png" alt="">
+                    <p>Отзывов: <span>5678</span></p>
+                </div>
+                <div class="main-about__info-item">
+                    <img src="assets/images/icons/banks-icon.png" alt="">
+                    <p>Банков и МФО: <span>234</span></p>
                 </div>
             </div>
-            <div class="popular-panes">
-                <div class="popular-pane tabs-pane tabs-pane_show">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+</div>
+
+<section class="benefits section">
+    <div class="container">
+        <div class="benefits__inner">
+            <div class="benefits-item">
+                <img class="benefits-item__icon" src="assets/images/icons/like-big-green.svg" alt="">
+                <div class="benefits-item__content">
+                    <p class="benefits-item__title">Бесплатно</p>
+                    <p class="benefits-item__descr">Не берём плату за использование нашего сервиса</p>
                 </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="benefits-item">
+                <img class="benefits-item__icon" src="assets/images/icons/like-big-green.svg" alt="">
+                <div class="benefits-item__content">
+                    <p class="benefits-item__title">Бесплатно</p>
+                    <p class="benefits-item__descr">Не берём плату за использование нашего сервиса</p>
                 </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="benefits-item">
+                <img class="benefits-item__icon" src="assets/images/icons/like-big-green.svg" alt="">
+                <div class="benefits-item__content">
+                    <p class="benefits-item__title">Бесплатно</p>
+                    <p class="benefits-item__descr">Не берём плату за использование нашего сервиса</p>
                 </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popular-pane tabs-pane">
-                    <div class="popular-slider">
-                        <div class="swiper-wrapper">
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                            <a class="popular-item swiper-slide" href="#">
-                                <img src="assets/images/banks/tinkoff.png" alt="">
-                                <div class="popular-item__info">
-                                    <p class="popular-item__name">Тинькофф Платинум</p>
-                                    <p class="popular-item__limit">Лимит: до 1 000 000 ₽</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-nav">
-                            <div class="slider-nav_prev slider-btn-prev swiper-button-prev">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                            <div class="slider-nav_next slider-btn-next swiper-button-next">
-                                <svg>
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners section">
+    <div class="container">
+        <div class="partners__inner">
+            <div class="partners-item">
+                <img class="partners-item__img" src="assets/images/partners/partn-1.png" alt="">
+            </div>
+            <div class="partners-item">
+                <img class="partners-item__img" src="assets/images/partners/partn-2.png" alt="">
+            </div>
+            <div class="partners-item">
+                <img class="partners-item__img" src="assets/images/partners/partn-3.png" alt="">
+            </div>
+            <div class="partners-item">
+                <img class="partners-item__img" src="assets/images/partners/partn-4.png" alt="">
+            </div>
+            <div class="partners-item">
+                <img class="partners-item__img" src="assets/images/partners/partn-5.png" alt="">
             </div>
         </div>
     </div>

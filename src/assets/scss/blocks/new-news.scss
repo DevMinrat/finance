@@ -1,0 +1,34 @@
+.new-news__inner {
+  position: relative;
+}
+
+.new-news__slider {
+  overflow: hidden;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 6rem;
+  }
+}
+
+.new-news__item {
+  width: 100%;
+  max-width: 30rem;
+
+  overflow: hidden;
+
+  border-radius: 0.5rem;
+}
+.new-news__item-img {
+  width: 100%;
+  height: 25rem;
+
+  object-fit: cover;
+}
+.new-news__item_name {
+  font-size: 2.1rem;
+  font-weight: 500;
+
+  padding: 2rem;
+
+  background: #f8f8f8;
+}

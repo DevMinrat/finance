@@ -134,14 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-  new ItcTabs(".tabs");
-  // const tabs = document.querySelectorAll(".tabs");
+  // new ItcTabs(".tabs");
+  const tabs = document.querySelectorAll(".tabs");
 
-  // if (tabs.length) {
-  //   tabs.forEach((el) => {
-  //     new ItcTabs(el);
-  //   });
-  // }
+  if (tabs.length) {
+    tabs.forEach((el) => {
+      new ItcTabs(el);
+    });
+  }
 
   // modal functioal
 

@@ -1,0 +1,27 @@
+.benefits__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.benefits-item {
+  width: 100%;
+  max-width: 41rem;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.benefits-item__icon {
+  width: 11rem;
+  height: auto;
+}
+.benefits-item__title {
+  font-weight: 500;
+  font-size: 2.4rem;
+
+  margin-bottom: 0.4rem;
+}
+.benefits-item__descr {
+  color: $gray;
+}
