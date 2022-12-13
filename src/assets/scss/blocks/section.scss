@@ -48,6 +48,8 @@ h1 {
   @include breakpoint($sm-bp) {
     font-size: 3.6rem;
     text-align: center;
+
+    margin: 0 -1.5rem 3rem;
   }
 }
 h2 {

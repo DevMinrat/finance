@@ -3,6 +3,10 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 6rem 3rem;
+  }
 }
 .benefits-item {
   width: 100%;
@@ -11,17 +15,41 @@
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  @include breakpoint($lg-bp) {
+    max-width: 36rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 12.9rem;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
 .benefits-item__icon {
   width: 11rem;
   height: auto;
+
+  @include breakpoint($sm-bp) {
+    width: 8rem;
+  }
 }
 .benefits-item__title {
   font-weight: 500;
   font-size: 2.4rem;
 
   margin-bottom: 0.4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.1rem;
+  }
 }
 .benefits-item__descr {
   color: $gray;
+
+  @include breakpoint($sm-bp) {
+    word-break: break-word;
+  }
 }

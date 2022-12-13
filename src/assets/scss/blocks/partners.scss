@@ -3,10 +3,19 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem 7rem;
+
+  @include breakpoint($sm-bp) {
+    justify-content: center;
+    gap: 4.5rem 5rem;
+  }
 }
 .partners-item {
   width: 100%;
   max-width: 20rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 12rem;
+  }
 }
 .partners-item__img {
   width: 100%;
