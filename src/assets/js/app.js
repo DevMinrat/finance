@@ -172,22 +172,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // accordeon
 
-  //   const faqAccTitle = document.querySelectorAll(".faq__item-title"),
-  //     faqAccText = document.querySelectorAll(".faq__item-descr");
+  const faqAccTitle = document.querySelectorAll(".faq__item-title"),
+    faqAccText = document.querySelectorAll(".faq__item-descr");
 
-  //   if (faqAccTitle.length > 0) {
-  //     for (let i = 0; i < faqAccTitle.length; i++) {
-  //       faqAccTitle[i].addEventListener("click", function () {
-  //         this.classList.toggle("active");
+  if (faqAccTitle.length > 0) {
+    for (let i = 0; i < faqAccTitle.length; i++) {
+      faqAccTitle[i].addEventListener("click", function () {
+        this.classList.toggle("active");
 
-  //         let panel = faqAccText[i];
+        let panel = faqAccText[i];
 
-  //         if (panel.style.maxHeight) {
-  //           panel.style.maxHeight = null;
-  //         } else {
-  //           panel.style.maxHeight = panel.scrollHeight + "px";
-  //         }
-  //       });
-  //     }
-  //   }
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  }
 });
