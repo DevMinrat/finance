@@ -190,4 +190,51 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  // table sorting
+
+  const getCellValue = (tr, idx) =>
+    tr.children[idx].innerText || tr.children[idx].textContent;
+
+  const comparer = (idx, asc) => (a, b) =>
+    ((v1, v2) =>
+      v1 !== "" && v2 !== "" && !isNaN(v1) && !isNaN(v2)
+        ? v1 - v2
+        : v1.toString().localeCompare(v2))(
+      getCellValue(asc ? a : b, idx),
+      getCellValue(asc ? b : a, idx)
+    );
+
+  function changeArrows(i, th) {
+    if (i === 0) {
+      document.querySelectorAll("th").forEach((el) => {
+        el.classList.remove("filter-up", "filter-down");
+      });
+    } else {
+      if (th.classList.contains("filter-down")) {
+        th.classList.remove("filter-down");
+        th.classList.add("filter-up");
+      } else {
+        th.classList.add("filter-down");
+        th.classList.remove("filter-up");
+      }
+    }
+  }
+
+  // do the work...
+  document.querySelectorAll("th").forEach((th, i) =>
+    th.addEventListener("click", () => {
+      const table = th.closest("table");
+      changeArrows(i, th);
+
+      Array.from(table.querySelectorAll("tr:nth-child(n+2)"))
+        .sort(
+          comparer(
+            Array.from(th.parentNode.children).indexOf(th),
+            (this.asc = !this.asc)
+          )
+        )
+        .forEach((tr) => table.appendChild(tr));
+    })
+  );
 });
