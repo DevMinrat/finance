@@ -194,7 +194,7 @@ title: Статья/запись
     </div>
 </div>
 
-<div class="article-comments">
+<div class="article-comments section">
     <div class="container">
         <div class="article-comments__inner">
             <div class="article-comments__item">
@@ -205,13 +205,23 @@ title: Статья/запись
                         например, в ТКБ и Инвестторгбанке — на 60 дней, в банке Ренессанс Кредит — на 91 день. </p>
                 </div>
             </div>
+            <form class="article-comments__form">
+                <div class="form-item">
+                    <label for="comment-name">Ваше имя</label>
+                    <input class="custom-input" type="text" id="comment-name" placeholder="Имя">
+                </div>
+                <div class="form-item">
+                    <label for="comment-text">Комментарий</label>
+                    <textarea class="custom-textarea" id="comment-text" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="form-privacy">
+                    <input class="custom-checkbox" type="checkbox" name="privacy" id="art-comment-priv" required>
+                    <label for="art-comment-priv">Соглашение на обработку персональных данных</label>
+                </div>
+                <button class="form-btn">Отправить</button>
+            </form>
         </div>
-        <form class="article-comments__form">
-            <label for="comment-name">Ваше имя</label>
-            <input class="custom-input" type="text" id="comment-name" placeholder="Имя">
-            <label for="comment-text">Комментарий</label>
-            <input class="custom-input" type="text" id="comment-text" placeholder="Комментарий">
-        </form>
     </div>
-
 </div>
+
+{{> modal-thx}}

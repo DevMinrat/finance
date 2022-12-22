@@ -1,0 +1,147 @@
+.form-item {
+  & + & {
+    margin-top: 1.7rem;
+  }
+
+  label {
+    display: block;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+
+    margin-bottom: 0.8rem;
+  }
+}
+
+.custom-input {
+  width: 100%;
+  height: 50px;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  padding: 1.6rem;
+
+  background: #ffffff;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 1rem;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+  }
+}
+
+.custom-textarea {
+  width: 100%;
+  height: 21rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  padding: 1.8rem 1.6rem;
+
+  background: #ffffff;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 1rem;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 1px !important;
+  height: 1px !important;
+
+  & + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000000;
+  }
+
+  & + label::before {
+    content: "";
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.6rem;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    margin-right: 1.9rem;
+
+    border: 0.1rem solid #000;
+    border-radius: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+
+    transition: all 0.1s linear;
+  }
+
+  &.error + label::before {
+    border: 0.1rem solid #ff0000;
+  }
+
+  &:not(:disabled):not(:checked) + label:hover::before {
+    border-color: $gray;
+  }
+
+  &:not(:disabled) + label::before {
+    background-color: transparent;
+  }
+
+  &:checked + label::before {
+    border-color: $primary;
+    background-color: $primary;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M3.783 10a.996.996 0 0 1-.794-.395L.436 6.235a.996.996 0 1 1 1.588-1.203l1.68 2.217L7.925.469a.997.997 0 0 1 1.69 1.053L4.628 9.531a.995.995 0 0 1-.845.469z' fill='%23ffffff'/></svg>");
+  }
+
+  &:disabled + label::before {
+    background-color: #e9ecef;
+  }
+}
+
+.form-privacy {
+  margin-top: 1.4rem;
+}
+
+.form-btn {
+  width: 100%;
+  max-width: 220px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+
+  background: $primary;
+  border-radius: 1rem;
+
+  margin-top: 1.4rem;
+  margin-left: auto;
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+
+  &:hover {
+    background: #219653;
+  }
+}

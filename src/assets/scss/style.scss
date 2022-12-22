@@ -65,7 +65,8 @@ svg {
 }
 
 input,
-button {
+button,
+textarea {
   border: none;
   background: transparent;
   font-family: Inter, sans-serif;
@@ -93,10 +94,12 @@ button {
   }
 
   ul {
-    list-style: disc inside;
+    list-style: disc outside;
+    padding-left: 2rem;
   }
   ol {
-    list-style: decimal inside;
+    list-style: decimal outside;
+    padding-left: 2rem;
   }
 }
 
@@ -119,6 +122,7 @@ button {
 @import "blocks/modal.scss";
 @import "blocks/section.scss";
 @import "blocks/breadcrumbs.scss";
+@import "blocks/forms.scss";
 
 @import "blocks/services-slider.scss";
 
