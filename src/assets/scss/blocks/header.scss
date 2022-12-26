@@ -268,7 +268,7 @@
     @media (min-width: 921px) {
       .nav-list__item-arrow {
         transform-origin: center;
-        transform: rotate(180deg) translateY(-0.2rem);
+        transform: rotate(0) translateY(0);
       }
 
       .nav-list__droplink-list {
@@ -364,6 +364,8 @@
 
   margin-left: 1rem;
   margin-bottom: 0.3rem;
+
+  transform: rotate(180deg) translateY(-0.2rem);
 
   @include breakpoint($lg-bp) {
     display: none;

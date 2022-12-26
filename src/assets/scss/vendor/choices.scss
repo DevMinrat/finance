@@ -76,11 +76,11 @@
   position: absolute;
   right: 2rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg);
   pointer-events: none;
 }
 .choices[data-type*="select-one"].is-open::after {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(0);
 }
 .choices[data-type*="select-one"][dir="rtl"]::after {
   left: 2rem;

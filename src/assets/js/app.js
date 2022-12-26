@@ -221,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // do the work...
   document.querySelectorAll("th").forEach((th, i) =>
     th.addEventListener("click", () => {
       const table = th.closest("table");
@@ -237,4 +236,55 @@ document.addEventListener("DOMContentLoaded", () => {
         .forEach((tr) => table.appendChild(tr));
     })
   );
+
+  // bank rating stars
+
+  const bankRatStars = document.querySelectorAll(".banks-item__rat-stars");
+
+  if (bankRatStars.length) {
+    bankRatStars.forEach((el) => {
+      const bankRating = getComputedStyle(el).getPropertyValue("--rat-val");
+      el.querySelectorAll("svg").forEach((el, i) => {
+        if (i >= bankRating) {
+          el.classList.add("empty");
+        }
+      });
+    });
+  }
+
+  // filter dropdown
+
+  const filter = document.querySelector(".filter");
+
+  if (filter) {
+    const filterPlaceholder = filter.querySelector(".filter-placeholder");
+    const filterDropdown = filter.querySelector(".filter-dropdown");
+    const filterLinks = filter.querySelectorAll(".filter-link");
+
+    function changeFilterArrows(link, list) {}
+
+    filterPlaceholder.addEventListener("click", () => {
+      filterPlaceholder.classList.toggle("active");
+      filterDropdown.classList.toggle("active");
+    });
+
+    filterDropdown.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = e.target;
+
+      filterLinks.forEach((item) => {
+        if (item != target) {
+          item.classList.remove("filter-up", "filter-down");
+        }
+      });
+
+      if (target.classList.contains("filter-down")) {
+        target.classList.remove("filter-down");
+        target.classList.add("filter-up");
+      } else {
+        target.classList.add("filter-down");
+        target.classList.remove("filter-up");
+      }
+    });
+  }
 });
