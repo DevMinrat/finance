@@ -261,8 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterDropdown = filter.querySelector(".filter-dropdown");
     const filterLinks = filter.querySelectorAll(".filter-link");
 
-    function changeFilterArrows(link, list) {}
-
     filterPlaceholder.addEventListener("click", () => {
       filterPlaceholder.classList.toggle("active");
       filterDropdown.classList.toggle("active");

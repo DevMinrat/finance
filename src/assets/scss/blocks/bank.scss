@@ -1,0 +1,94 @@
+.common-info__inner {
+  display: flex;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+.common-info__navs {
+  width: 100%;
+
+  margin-bottom: 0;
+
+  background: #e0e0e0;
+  border-radius: 2rem 0 0 2rem;
+
+  overflow: hidden;
+
+  @include breakpoint($lg-bp) {
+    border-radius: 0;
+    background: none;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @include breakpoint($lg-bp) {
+      flex-direction: row;
+    }
+  }
+}
+.common-info__nav-btn {
+  height: 6rem;
+
+  @include breakpoint($lg-bp) {
+    height: unset;
+  }
+
+  &.tabs-btn {
+    width: 100%;
+
+    text-align: left;
+    font-size: 2.1rem;
+
+    padding: 1rem 4rem;
+
+    @include breakpoint($lg-bp) {
+      width: max-content;
+
+      font-size: 1.8rem;
+
+      padding: 0.5rem 0;
+    }
+  }
+  &.tabs-btn.tabs-btn_active {
+    color: $black;
+
+    background: #f2f2f2;
+    border-bottom: none;
+
+    @include breakpoint($lg-bp) {
+      color: $secondary;
+
+      border-bottom: 0.2rem solid $secondary;
+      background: none;
+    }
+  }
+}
+
+.common-info__panes {
+  background: #f2f2f2;
+
+  border-radius: 0 2rem 2rem 0;
+
+  @include breakpoint($lg-bp) {
+    border-radius: 0;
+    background: none;
+  }
+}
+.common-info__pane {
+  padding: 6.5rem 11rem 6rem 3rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 0;
+  }
+}
+.text {
+}
+.tabs-pane {
+}
+.tabs-pane_show {
+}

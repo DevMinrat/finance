@@ -1,0 +1,73 @@
+.similar-banks__inner {
+  position: relative;
+}
+
+.similar-banks__slider {
+  overflow: hidden;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 6rem;
+  }
+}
+
+.similar-banks__item {
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 41rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2.6rem 1.6rem;
+
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: inset 0px -1px 0px #e4e4ef;
+  border-radius: 2rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    max-width: 24rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: unset;
+    gap: 0;
+
+    padding: 0.8rem 1.6rem 1.9rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 18.3rem;
+
+    @include breakpoint($sm-bp) {
+      max-width: 15rem;
+    }
+  }
+}
+
+.similar-banks__info {
+}
+
+.similar-banks__name {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+
+  margin-bottom: 0.4rem;
+}
+
+.banks-item__rat {
+  width: max-content;
+}
+
+.banks-item__rat-value {
+  color: $black;
+}

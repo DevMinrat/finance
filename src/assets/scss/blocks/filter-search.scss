@@ -166,7 +166,7 @@
 
   background: #ffffff;
   border-radius: 1rem;
-  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.1);
 
   @include breakpoint($lg-bp) {
     max-width: 24rem;
@@ -174,8 +174,6 @@
 
   @include breakpoint($sm-bp) {
     max-width: 100%;
-
-    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
   }
 }
 .filter-placeholder {
@@ -225,7 +223,7 @@
 
   background: white;
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.1);
 
   &.active {
     display: grid;
