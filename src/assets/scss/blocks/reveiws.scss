@@ -1,0 +1,97 @@
+.reveiws {
+  .reveiws__inner {
+    max-width: 85rem;
+
+    margin: unset;
+  }
+
+  .pagination {
+    margin-top: 3rem;
+  }
+
+  .comments__form {
+    margin-top: 12rem;
+  }
+}
+
+.reveiws-item {
+  width: 100%;
+  max-width: 85rem;
+
+  padding: 3rem;
+
+  border-radius: 1rem;
+
+  & + & {
+    margin-top: 2rem;
+  }
+
+  &.positive {
+    background: #ebf6eb;
+
+    .reveiws__tag {
+      color: $primary;
+    }
+  }
+  &.neutral {
+    background: #f2f2f2;
+
+    .reveiws__tag {
+      color: $secondary;
+    }
+  }
+  &.negative {
+    background: #fff0f0;
+
+    .reveiws__tag {
+      color: #eb5757;
+    }
+  }
+}
+
+.reveiws__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+.reveiws-person__name {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.2;
+
+  margin-bottom: 0.4rem;
+}
+
+.reveiws-person__date {
+  font-size: 1.4rem;
+  color: $gray;
+}
+
+.reveiws__tag {
+  width: 100%;
+  max-width: 21.2rem;
+  height: 5.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  background: #ffffff;
+  border-radius: 1rem;
+}
+
+.reveiws__content {
+  margin-bottom: 2rem;
+}

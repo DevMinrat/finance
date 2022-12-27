@@ -125,6 +125,7 @@ textarea {
 @import "blocks/forms.scss";
 @import "blocks/pagination.scss";
 @import "blocks/filter-search.scss";
+@import "blocks/rating.scss";
 
 @import "blocks/services-slider.scss";
 
@@ -156,7 +157,14 @@ textarea {
 
 @import "blocks/bank-products.scss";
 
+@import "blocks/reveiws.scss";
+
 @import "blocks/footer";
+
+.simple-gap {
+  display: block;
+  padding: 3rem;
+}
 
 .hide {
   display: none;

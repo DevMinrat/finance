@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // bank rating stars
 
-  const bankRatStars = document.querySelectorAll(".banks-item__rat-stars");
+  const bankRatStars = document.querySelectorAll(".item-rating_stars");
 
   if (bankRatStars.length) {
     bankRatStars.forEach((el) => {

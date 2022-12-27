@@ -1,0 +1,46 @@
+.rating {
+  width: max-content;
+
+  display: flex;
+  align-self: flex-start;
+  gap: 1.2rem;
+
+  padding: 2.5rem 5rem 3.5rem 2rem;
+
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2rem;
+
+  @include breakpoint($sm-bp) {
+    padding-right: 4rem;
+  }
+}
+.rating-info__num {
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 1.2;
+
+  margin-bottom: 0.1rem;
+}
+.rating-info__count {
+  font-size: 1.4rem;
+  color: $gray;
+}
+.rating-stars__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: $gray;
+  font-size: 1.4rem;
+
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
+  background: #f8f8f8;
+  border-radius: 0.8rem;
+
+  a {
+    color: $secondary;
+  }
+}

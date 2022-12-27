@@ -75,7 +75,7 @@
     }
   }
 }
-.banks-item__rat {
+.item-rating {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -85,10 +85,10 @@
   background: #f8f8f8;
   border-radius: 0.8rem;
 }
-.banks-item__rat-value {
+.item-rating__value {
   font-size: 1.4rem;
 }
-.banks-item__rat-stars {
+.item-rating_stars {
   display: flex;
   align-items: center;
   gap: 0.33rem;

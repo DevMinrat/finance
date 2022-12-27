@@ -145,3 +145,54 @@
     background: #219653;
   }
 }
+
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+
+.star-radio + label {
+  cursor: pointer;
+}
+
+.form__stars {
+  position: relative;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-top: 2rem;
+
+  & > input:checked ~ label svg {
+    fill: #f9d057;
+    stroke: #f9d057;
+  }
+  &:not(:checked) > label:hover svg,
+  &:not(:checked) > label:hover ~ label svg {
+    fill: #f9d057;
+    stroke: #f9d057;
+  }
+  & > input:checked + label:hover svg,
+  & > input:checked + label:hover ~ label svg,
+  & > input:checked ~ label:hover svg,
+  & > input:checked ~ label:hover ~ label svg,
+  & > label:hover ~ input:checked ~ label svg {
+    fill: #f9d057;
+    stroke: #f9d057;
+  }
+}
+.form__rating-star {
+  padding: 0 0.32rem;
+  svg {
+    width: 2.6rem;
+    height: 2.6rem;
+
+    fill: none;
+    stroke: #bdbdbd;
+  }
+}
