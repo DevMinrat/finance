@@ -285,4 +285,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const dictionaryDots = document.querySelectorAll(
+    ".dictionary-letter__item-dots"
+  );
+
+  if (dictionaryDots.length) {
+    dictionaryDots.forEach((el) => {
+      el.addEventListener("click", () => {
+        el.style.display = "none";
+        el.nextElementSibling.classList.remove("hide");
+      });
+    });
+  }
 });
