@@ -72,10 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // inputs
 
-  const servSearchSelect = document.querySelectorAll(".serv-search__select");
+  const simpleSelect = document.querySelectorAll(".simple-select");
 
-  if (servSearchSelect.length) {
-    servSearchSelect.forEach((el) => {
+  if (simpleSelect.length) {
+    simpleSelect.forEach((el) => {
       new Choices(el, {
         searchEnabled: false,
         shouldSort: false,
@@ -208,15 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function changeArrows(i, th) {
     if (i === 0) {
       document.querySelectorAll("th").forEach((el) => {
-        el.classList.remove("filter-up", "filter-down");
+        el.classList.remove("sort-up", "sort-down");
       });
     } else {
-      if (th.classList.contains("filter-down")) {
-        th.classList.remove("filter-down");
-        th.classList.add("filter-up");
+      if (th.classList.contains("sort-down")) {
+        th.classList.remove("sort-down");
+        th.classList.add("sort-up");
       } else {
-        th.classList.add("filter-down");
-        th.classList.remove("filter-up");
+        th.classList.add("sort-down");
+        th.classList.remove("sort-up");
       }
     }
   }
@@ -252,37 +252,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // sort dropdown
+
+  const sorts = document.querySelectorAll(".sort");
+
+  if (sorts.length) {
+    const sortsPlaceholder = document.querySelectorAll(".sort-placeholder");
+    const sortsDropdown = document.querySelectorAll(".sort-dropdown");
+    const sortsLinks = document.querySelectorAll(".sort-link");
+
+    sortsPlaceholder.forEach((el) => {
+      el.addEventListener("click", () => {
+        el.classList.toggle("active");
+        el.nextElementSibling.classList.toggle("active");
+      });
+    });
+
+    sortsDropdown.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = e.target;
+
+        sortsLinks.forEach((item) => {
+          if (item != target) {
+            item.classList.remove("sort-up", "sort-down");
+          }
+        });
+
+        if (target.classList.contains("sort-down")) {
+          target.classList.remove("sort-down");
+          target.classList.add("sort-up");
+        } else {
+          target.classList.add("sort-down");
+          target.classList.remove("sort-up");
+        }
+      });
+    });
+  }
+
   // filter dropdown
 
   const filter = document.querySelector(".filter");
 
   if (filter) {
-    const filterPlaceholder = filter.querySelector(".filter-placeholder");
-    const filterDropdown = filter.querySelector(".filter-dropdown");
-    const filterLinks = filter.querySelectorAll(".filter-link");
+    const filterPlaceholder = document.querySelector(".filter-placeholder");
 
     filterPlaceholder.addEventListener("click", () => {
       filterPlaceholder.classList.toggle("active");
-      filterDropdown.classList.toggle("active");
-    });
-
-    filterDropdown.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = e.target;
-
-      filterLinks.forEach((item) => {
-        if (item != target) {
-          item.classList.remove("filter-up", "filter-down");
-        }
-      });
-
-      if (target.classList.contains("filter-down")) {
-        target.classList.remove("filter-down");
-        target.classList.add("filter-up");
-      } else {
-        target.classList.add("filter-down");
-        target.classList.remove("filter-up");
-      }
+      filterPlaceholder.nextElementSibling.classList.toggle("active");
     });
   }
 
@@ -296,6 +313,20 @@ document.addEventListener("DOMContentLoaded", () => {
         el.style.display = "none";
         el.nextElementSibling.classList.remove("hide");
       });
+    });
+  }
+
+  // services rolled tabs
+
+  const servicesItemsBtn = document.querySelector(".services-item__more-btn");
+  const servicesInfoInner = document.querySelector(".services-info__inner");
+  const servicesInfo = document.querySelector(".services-info");
+
+  if (servicesItemsBtn) {
+    servicesItemsBtn.addEventListener("click", () => {
+      servicesItemsBtn.classList.toggle("active");
+      servicesInfoInner.classList.toggle("hide");
+      servicesInfo.classList.toggle("active");
     });
   }
 });

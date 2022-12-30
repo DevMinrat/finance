@@ -1,0 +1,775 @@
+---
+layout: default
+title: Главная страница
+---
+
+
+<div class="container">
+    <div class="flex-wrap gap6">
+        <div class="filter">
+            <p class="filter-placeholder">
+                <img src="assets/images/icons/filter-icon.svg" alt="">Фильтр
+                <svg>
+                    <use href="#chevron"></use>
+                </svg>
+            </p>
+            <div class="filter-dropdown">
+                <div class="filter-input">
+                    <label class="filter-input__label" for="summ">Сумма</label>
+                    <input class="custom-input" type="text" name="summ" id="summ">
+                </div>
+                <div class="filter-input">
+                    <label class="filter-input__label" for="term">Срок</label>
+                    <input class="custom-input" type="text" name="term" id="term">
+                </div>
+                <div class="filter-input">
+                    <label class="filter-input__label" for="term">Заемщик</label>
+                    <select class="simple-select">
+                        <option value="any">Любой</option>
+                        <option value="not any">Не любой</option>
+                    </select>
+                </div>
+                <div class="filter-input filter-input--checkboxes">
+                    <p class="filter-input__label">Способ получения</p>
+                    <div class="filter-checkboxes">
+                        <input class="custom-checkbox" type="checkbox" name="to-card" id="to-card">
+                        <label for="to-card">На карту</label>
+                        <input class="custom-checkbox" type="checkbox" name="cache" id="cache">
+                        <label for="cache">Наличными</label>
+                        <input class="custom-checkbox" type="checkbox" name="banks" id="banks">
+                        <label for="banks">На банковский счет</label>
+                        <input class="custom-checkbox" type="checkbox" name="qiwi" id="qiwi">
+                        <label for="qiwi">QIWI</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort">
+            <p class="sort-placeholder">
+                <img src="assets/images/icons/sort-icon.svg" alt=""> Сортировка
+                <svg>
+                    <use href="#chevron"></use>
+                </svg>
+            </p>
+            <div class="sort-dropdown">
+                <a class="sort-link" href="#">По популярности</a>
+                <a class="sort-link" href="#">По ставке</a>
+                <a class="sort-link" href="#">По сумме</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="simple-gap"></div>
+
+<div class="services section">
+    <div class="container">
+        <div class="services__inner">
+            <div class="services-item">
+                <div class="services-item__header">
+                    <img class="services-item__img" src="assets/images/banks/alfabank.png" alt="">
+                    <div class="services-item__header-info">
+                        <h2 class="services-item__name">Тинькофф Платинум</h2>
+                        <div class="item-rating">
+                            <p class="item-rating__value">4.0</p>
+                            <div class="item-rating_stars" style="--rat-val: 4;">
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="services-item__order-btn filled-btn" href="#">Оформить</a>
+                </div>
+                <div class="services-item__info si-info">
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Лимит:</p>
+                        <p class="si-info__item-descr">до 300 000 ₽</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Льготный период:</p>
+                        <p class="si-info__item-descr">180 дней</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Обслуживание:</p>
+                        <p class="si-info__item-descr">0 ₽</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Бонусы:</p>
+                        <p class="si-info__item-descr">Кроме того, сейчас банки предпочитают «долгие»
+                            вклады на три или два. </p>
+                    </div>
+                </div>
+
+                <div class="services-info tabs ">
+                    <button class="services-item__more-btn">
+                        <svg>
+                            <use href="#chevron"></use>
+                        </svg>
+                    </button>
+                    <div class="services-info__inner hide">
+                        <div class="services-info__navs tabs-nav">
+                            <div class="swiper-wrapper">
+                                <button
+                                    class="services-info__nav-btn swiper-slide tabs-btn tabs-btn_active">Тарифы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                            </div>
+                        </div>
+                        <div class="services-info__panes text">
+                            <div class="services-info__pane text tabs-pane tabs-pane_show">
+                                <h6>Общие условия</h6>
+                                <div class="services-info__table">
+                                    <div class="table-row">
+                                        <h6>Платежная система</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в <strong>ТКБ</strong> и Инвестторгбанке —
+                                                на 60 дней, в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Доступные валюты</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Кредитный лимит</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <h6>Выпуск и обслуживание</h6>
+                                <div class="services-info__table">
+                                    <div class="table-row">
+                                        <h6>Платежная система</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Доступные валюты</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Кредитный лимит</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item">
+                <div class="services-item__header">
+                    <img class="services-item__img" src="assets/images/banks/alfabank.png" alt="">
+                    <div class="services-item__header-info">
+                        <h2 class="services-item__name">Тинькофф Платинум</h2>
+                        <div class="item-rating">
+                            <p class="item-rating__value">4.0</p>
+                            <div class="item-rating_stars" style="--rat-val: 4;">
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                                <svg>
+                                    <use href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="services-item__order-btn filled-btn" href="#">Оформить</a>
+                </div>
+                <div class="services-item__info si-info">
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Лимит:</p>
+                        <p class="si-info__item-descr">до 300 000 ₽</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Льготный период:</p>
+                        <p class="si-info__item-descr">180 дней</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Обслуживание:</p>
+                        <p class="si-info__item-descr">0 ₽</p>
+                    </div>
+                    <div class="si-info__item">
+                        <p class="si-info__item-name">Бонусы:</p>
+                        <p class="si-info__item-descr">Кроме того, сейчас банки предпочитают «долгие»
+                            вклады на три или два. </p>
+                    </div>
+                </div>
+
+                <div class="services-info tabs ">
+                    <button class="services-item__more-btn">
+                        <svg>
+                            <use href="#chevron"></use>
+                        </svg>
+                    </button>
+                    <div class="services-info__inner hide">
+                        <div class="services-info__navs tabs-nav">
+                            <div class="swiper-wrapper">
+                                <button
+                                    class="services-info__nav-btn swiper-slide tabs-btn tabs-btn_active">Тарифы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                                <button class="services-info__nav-btn swiper-slide tabs-btn">Требования
+                                    и документы</button>
+                            </div>
+                        </div>
+                        <div class="services-info__panes text">
+                            <div class="services-info__pane text tabs-pane tabs-pane_show">
+                                <h6>Общие условия</h6>
+                                <div class="services-info__table">
+                                    <div class="table-row">
+                                        <h6>Платежная система</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в <strong>ТКБ</strong> и Инвестторгбанке —
+                                                на 60 дней, в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Доступные валюты</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Кредитный лимит</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <h6>Выпуск и обслуживание</h6>
+                                <div class="services-info__table">
+                                    <div class="table-row">
+                                        <h6>Платежная система</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Доступные валюты</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <h6>Кредитный лимит</h6>
+                                        <div>
+                                            <p>Кроме того, сейчас банки предпочитают <span
+                                                    style="color: #2D9CDB;">«долгие»</span> вклады —
+                                                на три или два года.
+                                                Но есть и короткие: например, в ТКБ и Инвестторгбанке — на 60 дней,
+                                                в банке
+                                                <a href="#">Ренессанс Кредит</a> — на 91 день.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                            <div class="services-info__pane text tabs-pane">
+                                <p><strong>✔️ Деньги охраняются.</strong> Все вклады до 1,4 миллиона ₽ в банках,
+                                    перечисленных в
+                                    таблице, защищены Агентством по страхованию вкладов — АСВ. Даже если у банка отзовут
+                                    лицензию, АСВ
+                                    вернёт вкладчику деньги, которые он положил на депозит — но до 1,4 миллиона ₽. Если
+                                    ваши
+                                    сбережения
+                                    больше этой суммы, то надёжнее разложить их в несколько разных банков.</p>
+                                <br>
+                                <p><strong>✔️ Есть самые надёжные банки.</strong> В России есть список <a
+                                        href="#">системно
+                                        значимых
+                                        банков</a>. Их финансовая
+                                    устойчивость важна для всей банковской системы страны.</p>
+                                <br>
+                                <p>Из нашей таблицы в список системно значимых входят эти банки:</p>
+                                <br>
+                                <ul>
+                                    <li>ВТБ;</li>
+                                    <li>МКБ;</li>
+                                    <li>Альфа-Банк;</li>
+                                    <li>Газпромбанк;</li>
+                                    <li>банк Открытие.</li>
+                                </ul>
+                                <br>
+                                <p><strong>✔️ Изучите условия.</strong> Большинство вкладов с выгодными ставками
+                                    отличаются
+                                    негибкими
+                                    условиями. С них запрещено снимать часть денег досрочно (иначе проценты сгорают),
+                                    пополнять
+                                    можно до
+                                    определённого срока или нельзя вовсе. Если для вас важно иметь возможность более
+                                    свободно
+                                    распоряжаться деньгами, рассмотрите вклады с гибкими условиями (но ставка, вероятнее
+                                    всего,
+                                    будет
+                                    ниже) или накопительные счета.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

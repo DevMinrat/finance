@@ -158,3 +158,7 @@ const commonNavsSlider = new Swiper(".common-info__navs", {
     },
   },
 });
+const serviceInfoNavsSlider = new Swiper(".services-info__navs", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+});

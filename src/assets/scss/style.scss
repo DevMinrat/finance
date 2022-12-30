@@ -124,7 +124,7 @@ textarea {
 @import "blocks/breadcrumbs.scss";
 @import "blocks/forms.scss";
 @import "blocks/pagination.scss";
-@import "blocks/filter-search.scss";
+@import "blocks/sort-search.scss";
 @import "blocks/rating.scss";
 
 @import "blocks/services-slider.scss";
@@ -161,11 +161,25 @@ textarea {
 
 @import "blocks/dictionary.scss";
 
+@import "blocks/services.scss";
+
 @import "blocks/footer";
 
 .simple-gap {
   display: block;
   padding: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gap6 {
+  gap: 6rem;
 }
 
 .hide {
